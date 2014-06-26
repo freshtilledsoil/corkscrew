@@ -1,0 +1,48 @@
+header, footer, section, article, aside, nav {
+  display: block;
+}
+
+body.cs-body {
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  background: $color-secondary;
+  
+  &.is-loading {
+    overflow: hidden;
+  }
+  
+}
+
+.cs-button {
+  font-family: $font-primary;
+  @include font-size(14);
+  border: 0;
+  padding: 6px 12px;
+  margin: 0;
+  display: inline-block;
+  background: $color-cta;
+  color: $color-base;
+  font-weight: 400;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  @extend .cs-is-uppercase;
+  
+  
+  &:hover,
+  &:focus {
+    background: darken($color-cta, 10);
+    outline: 0;
+  }
+  
+  &:active {
+    background: $color-primary;
+    outline: 0;
+  }
+  
+} // .cs-button
+
+.cs-button-html {
+  @include inline-block(middle);
+  float: right;
+}

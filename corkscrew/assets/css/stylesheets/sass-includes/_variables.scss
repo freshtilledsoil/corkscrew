@@ -1,0 +1,27 @@
+$font-sans-serif: "Open Sans", Sans-serif; 
+$font-serif: Georgia, serif; 
+$font-mono: Courier, Monospace; 
+
+$font-primary: $font-sans-serif;
+$font-secondary: $font-serif;
+$font-tertiary: $font-mono;
+
+$color-base: #fff;
+
+$color-primary: #2d2c2a;
+$color-secondary: #f0f0f0;
+$color-tertiary: #96908a;
+$color-accent: #e3e2de;
+$color-highlight: #666;
+
+
+$color-action: #888;
+$color-action-active: darken($color-action, 10);
+$color-cta: #f6833e;
+
+$breakpoint-wide: 1280px;
+$breakpoint-large: 1000px;
+$breakpoint-mid: 800px;
+$breakpoint-small: 600px;
+
+$layout-gutter-multiple: 10px;
