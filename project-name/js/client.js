@@ -1,4 +1,4 @@
-(function(){
+;(function(){
 
   // JS here
 

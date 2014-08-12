@@ -10,7 +10,74 @@
   
   <div class="cs-content">
     
-widget added here
+<form>
+  <div class="form-group">
+    <label for="f1">Text field</label>
+    <input type="text" id="f1" name="f1" placeholder="a text field">
+  </div>
+  
+  <div class="form-group">
+    <label for="f3">Textarea</label>
+    <textarea cols="50" rows="10" id="f3"></textarea>
+  </div>
+  
+  <div class="form-group">
+    <label for="f10">Select menu</label>
+    <select>
+      <option disabled selected>Select an option</option>
+      <option>Option 1</option>
+      <option>Option 2</option>
+      <option>Option 3</option>
+      <option>Option 4</option>
+    </select>
+  </div>
+  
+  <div class="form-group checkbox-group">
+    <fieldset>
+      <legend>Checkbox group with fieldset &amp; legend</legend>
+
+      <input type="checkbox" id="f4" name="f4" value="1">
+      <label for="f4">Option 1</label>
+      
+      <input type="checkbox" id="f5" name="f5" value="2">
+      <label for="f5">Option 2</label>
+      
+      <input type="checkbox" id="f6" name="f6" value="3">
+      <label for="f6">Option 3</label>
+      
+    </fieldset>
+  </div>
+  
+  <div class="form-group radio-group">
+    <fieldset>
+      <legend>Radio group with fieldset &amp; legend</legend>
+      
+      <input type="radio" id="f7" name="group" value="1">
+      <label for="f7">Option 1</label>
+      
+      <input type="radio" id="f8" name="group" value="2">
+      <label for="f8">Option 2</label>
+      
+      <input type="radio" id="f9" name="group" value="3">
+      <label for="f9">Option 3</label>
+      
+    </fieldset>
+  </div>
+  
+  <div class="form-group">
+    <label for="f11">Datalist</label>
+    <input list="dlist-options" id="f11" />
+
+    <datalist id="dlist-options">
+      <option value="option 1">
+      <option value="option 2">
+      <option value="option 3">
+      <option value="option 4">
+      <option value="option 5">
+    </datalist>
+  </div>
+  
+</form>
     
   </div><!--/.cs-content-->
 </section><!--/.cs-content-section-->
@@ -19,7 +86,7 @@ widget added here
   
   <header class="cs-content-header">
     <div class="cs-content-heading">
-      <h1>Button Types</h1>
+      <h1>Standard buttons</h1>
       <p>Use any of the available button classes to quickly create a styled button.</p>
     </div>
     
@@ -27,7 +94,30 @@ widget added here
   
   <div class="cs-content">
     
-widget added here
+<button type="button" class="btn">Standard button</button>
+<button type="button" class="btn btn-primary">Primary button</button>
+<button type="button" class="btn btn-secondary">Secondary button</button>
+<button type="button" class="btn btn-tertiary">Tertiary button</button>
+    
+  </div><!--/.cs-content-->
+</section><!--/.cs-content-section-->
+
+<section class="cs-content-section">
+  
+  <header class="cs-content-header">
+    <div class="cs-content-heading">
+      <h1>Links as buttons</h1>
+      <p>Sometimes you want links to look like buttons, this is how you'd to that correctly</p>
+    </div>
+    
+  </header><!--/.cs-content-header-->
+  
+  <div class="cs-content">
+    
+<a href="#" role="button" class="btn">Standard button as a link</a>
+<a href="#" role="button" class="btn btn-primary">Primary button as a link</a>
+<a href="#" role="button" class="btn btn-secondary">Secondary button as a link</a>
+<a href="#" role="button" class="btn btn-tertiary">Tertiary button as a link</a>
     
   </div><!--/.cs-content-->
 </section><!--/.cs-content-section-->
