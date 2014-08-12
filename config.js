@@ -3,7 +3,7 @@ var Corkscrew = {
   name : "Style Guide &middot; Fresh Tilled Soil",
   logo: "project-name/images/logo.jpg",
   partials : "project-name/partials/",
-  repo: "https://github.com/freshtilledsoil",
+  repo: "https://github.com/freshtilledsoil/corkscrew",
   css: ["project-name/css/client.css"],
   js: ["project-name/js/client.js"],
   htmlViewer: true,
