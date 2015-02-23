@@ -4,9 +4,9 @@
 
 Corkscrew was designed with ease of use in mind, it should get out of your way and help you create clear, helpful style guides to hand off to an implementation team. At its core it's a communication tool, but style guides can also serve as application/site road maps.
 
-None of the Corkscrew CSS or JavaScript should collide with any custom code you need for your project, it's all namespaced.
+None of the Corkscrew CSS or JavaScript should collide with any custom code you need for your project; it's all namespaced.
 
-### Dependancies
+### Dependencies
 
 You need a server to run the style guide. This can be localhost or a real server (sorry localhost, you're not a real server); the Ajax calls need a server to execute properly. If you want to edit the framework CSS, we're using Sass in a [SMACSS](http://smacss.com/) development model. One of the project goals is to make the framework as portable as possible. The number of dependencies are intentionally kept to a minimum.
 
@@ -110,7 +110,7 @@ Repeat that HTML for each module you need.
 
 In the example project, this is represented in the directory "project-name", which should be renamed based on the actual name of the project you'll be building a style guide for.
 
-Inside of that directory, you should have all the neccessary project files, such as: images, CSS, and JavaScript. The directory structure is entirely up to you.
+Inside of that directory, you should have all the necessary project files, such as: images, CSS, and JavaScript. The directory structure is entirely up to you.
 
 Nothing inside this directory should be related to the framework itself, just the style guide.
 
@@ -130,4 +130,4 @@ If you need to customize the framework for your organization (or client), you wo
 If you need extra functionality in the framework itself (outside of the styleguide), you would do so in corkscrew-extend.js. We don't recommend using corkscrew.js for customizing the interface, which is the main Javascript file for the application, because it could affect upgrades.
 
 ## Support
-It's free so you're kinda on your own, but certainly file bugs; we also welcome all pull requests and contributions. Don't forget to sign up through Github for notifcations about updates to the framework.
+It's free so you're kinda on your own, but certainly file bugs; we also welcome all pull requests and contributions. Don't forget to sign up through Github for notifications about updates to the framework.
