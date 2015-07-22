@@ -115,7 +115,7 @@ var Pinot = {
 
         // set navigation tabs
         nav.appendChild(navItem);
-        navItem.innerHTML = '<a href="#' + section + '">' + section + '</a>';
+        navItem.innerHTML = '<a href="#' + section + '">' + section.replace('-', ' ') + '</a>';
 
         // set content blocks
         content.setAttribute('class', 'cs-section cs-is-hidden');
