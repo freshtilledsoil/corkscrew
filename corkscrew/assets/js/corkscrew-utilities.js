@@ -79,56 +79,57 @@ var CorkscrewUtil = {
     return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   },
   getTimestamp : function () {
-    
+
     return Date.now();
-    
+
   },
   load : function (type, path, callback) {
-  
+
     "use strict";
-    
+
     if (type === 'script'){
-    
+
       var script = document.createElement('script');
-      
+
       script.src = path + '?t=' + this.getTimestamp();
       document.getElementsByTagName('body')[0].appendChild(script);
-      
+
       script.addEventListener('load', function () {
-  
+
         if (typeof(callback) === 'function') {
           callback.call(this);
         }
-  
+
       }, false);
-      
+
     } else {
 
       var style = document.createElement('link');
-      
+
       style.setAttribute('href', path + '?t=' + this.getTimestamp());
       style.setAttribute('rel', 'stylesheet');
-      
+      style.setAttribute('id', 'cs-project-style-sheet');
+
       document.getElementsByTagName('head')[0].appendChild(style);
-      
+
       style.addEventListener('load', function () {
-  
+
         if (typeof(callback) === 'function') {
           callback.call(this);
         }
-  
+
       }, false);
 
     }
-    
-  
+
+
   }, // end load
   getHTTPObject : function () {
-    
+
     "use strict";
-    
+
     var xhr = false;
-    
+
     if (window.XMLHttpRequest) {
         xhr = new XMLHttpRequest();
     } else if (window.ActiveXObject) {
@@ -145,9 +146,9 @@ var CorkscrewUtil = {
     return xhr;
   },
   request : function (options, callback) {
-    
+
     "use strict";
-    
+
     var defaults = {
         'url' : null,
         'type' : 'GET',
@@ -156,19 +157,19 @@ var CorkscrewUtil = {
     request = this.getHTTPObject(),
     httpresponse,
     i;
-    
+
     // map all default settings to user defined options
     for (i = 0; i < defaults.length; i = i + 1) {
         if( typeof options[i] === "undefined" ) {
             options[i] = defaults[i];
         }
     }
-    
+
     request.onreadystatechange = function() {
-        
+
         // check to see if the Ajax call went through
         if ( request.readyState === 4 && request.status === 200 ) {
-            
+
             // save the ajax response to a variable
             if(options.dataType === 'json'){
                 httpresponse = JSON.parse(request.responseText);
@@ -177,21 +178,21 @@ var CorkscrewUtil = {
             } else {
                 httpresponse = request.responseText;
             }
-            
+
             // make sure the callback is indeed a function before executing it
             if(typeof callback === 'function'){
-            
+
                 callback(httpresponse);
-            
+
             } // end check
-    
+
         } // end ajax status check
-    
+
     }; // end onreadystatechange
-    
+
     request.open(options.type, options.url, true);
     request.send(null);
-  
+
   }
 
 }; // end Ajax object
