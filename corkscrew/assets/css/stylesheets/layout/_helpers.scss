@@ -4,6 +4,7 @@
   left: -9999px;
   opacity: 0;
   @include transition(opacity ease-in-out .2s);
+  visibility: hidden;
 }
 
 .cs-is-removed {
