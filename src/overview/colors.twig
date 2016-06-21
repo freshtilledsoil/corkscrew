@@ -1,0 +1,33 @@
+{# Disable the HTML Viewer for this section #}
+
+{% set project =
+  {
+    htmlViewer: false
+  }
+%}
+
+{% embed "_corkscrew-section.twig" %}
+
+  {% block label %}
+    Color Palette
+  {% endblock %}
+
+  {% block description %}
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et lectus et tortor placerat euismod.
+  {% endblock %}
+
+  {% block block_content %}
+
+    {% for color in colors %}
+
+      <div class="cs-color-wrap">
+        <div data-color="{{ color.hex }}" class="cs-color" style="background: {{ color.hex }};"></div>
+        <div class="cs-color-label">{{ color.label }}</div>
+        <div class="cs-color-hex">{{ color.hex }}</div>
+      </div><!--/.cs-color-wrap-->
+
+    {% endfor %}
+
+  {% endblock %}
+
+{% endembed %}

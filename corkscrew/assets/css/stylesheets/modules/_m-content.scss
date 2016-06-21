@@ -1,11 +1,11 @@
 .cs-content-section {
   margin: auto auto $layout-gutter-multiple * 8;
   max-width: 1200px;
-  
+
   &:last-child {
     margin-bottom: 0;
   }
-  
+
 }
 
 .cs-content-header {
@@ -18,7 +18,7 @@
   @include inline-block(middle);
   margin-bottom: 15px;
   max-width: 66%;
-  
+
   h1 {
     font-family: $font-primary;
     font-style: normal;
@@ -32,7 +32,7 @@
     line-height: 1.2;
     margin-bottom: 5px;
   }
-  
+
   p {
     @extend .cs-is-clean;
     @include font-size(12);
@@ -56,4 +56,32 @@
     color: $color-primary;
     @include font-size(14);
   }
+}
+
+.cs-template-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  @include font-size(18);
+  font-family: $font-primary;
+}
+
+.cs-template-list__item {
+
+
+  a {
+    color: $color-action;
+    display: block;
+    text-decoration: none;
+    padding: 10px 0;
+    border-bottom: 1px solid $color-secondary;
+    //transition: all linear 0.2s;
+
+    &:hover, &:focus {
+      color: $color-primary;
+      border-bottom-color: $color-accent;
+    }
+
+  }
+
 }

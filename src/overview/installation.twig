@@ -1,0 +1,25 @@
+{# Disable the HTML Viewer for this section #}
+
+{% set project =
+  {
+    htmlViewer: false
+  }
+%}
+
+{% embed "_corkscrew-section.twig" %}
+
+  {% block label %}
+    Installation
+  {% endblock %}
+
+  {% block description %}
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et lectus et tortor placerat euismod.
+  {% endblock %}
+
+  {% block block_content %}
+
+  <p>php -S localhost:8080 -t ./styleguide</p>
+
+  {% endblock %}
+
+{% endembed %}

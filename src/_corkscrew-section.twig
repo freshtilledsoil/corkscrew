@@ -1,0 +1,14 @@
+<section class="cs-content-section {% if project.htmlViewer == true %}generate-html{% endif %}">
+
+  <header class="cs-content-header">
+    <div class="cs-content-heading">
+    <h1>{% block label %}{% endblock %}</h1>
+    <p>{% block description %}{% endblock %}</p>
+  </div>
+
+</header><!--/.cs-content-header-->
+
+  <div class="cs-content">
+    {% block block_content %}{% endblock %}
+  </div><!--/.cs-content-->
+</section><!--/.cs-content-section-->

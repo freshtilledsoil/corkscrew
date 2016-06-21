@@ -21,25 +21,25 @@
     background: lighten($color-primary, 5);
     resize: none;
     @include box-sizing(border-box);
-    @include transition(all ease-in .15s);
+    // @include transition(all ease-in .15s);
     @include font-size(13);
 
     &:focus {
       background: lighten($color-primary, 10);
       outline: none;
     }
-    
+
     &.cs-is-hidden {
       height: 0;
       padding: 0;
       position: static;
     }
-    
+
   }
-  
+
   // HTML isn't rendering inside the textarea for IE 9, so let's just remove it, OK?
   .lt-ie10 & {
     display: none;
   }
-  
+
 }

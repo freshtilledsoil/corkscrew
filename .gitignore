@@ -1,8 +1,15 @@
 # Sass
+.sass-cache
+.sass-cache/
 .sass-cache/*
+*.map
 
-# Jekyll
-_site/
+# Slim & Twig
+/composer.lock
+/vendor
+
+# NPM
+node_modules/
 
 # Editors
 *.esproj
@@ -21,27 +28,5 @@ Session.vim
 .Trashes
 
 # Windows
-Thumbs.db 
+Thumbs.db
 Desktop.ini
-
-# SVN
-.svn/
-
-# Wordpress
-.htaccess
-wp-*.php
-xmlrpc.php
-wp-admin/
-wp-includes/
-wp-content/uploads/
-wp-content/blogs.dir/
-wp-content/upgrade/*
-wp-content/backup-db/*
-wp-content/advanced-cache.php
-wp-content/wp-cache-config.php
-wp-content/cache/*
-wp-content/cache/supercache/*
-sitemap.xml
-sitemap.xml.gz
-readme.html
-license.txt

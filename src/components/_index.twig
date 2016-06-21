@@ -1,0 +1,10 @@
+{% set section = 'components' %}
+{% extends "_corkscrew-layout.twig" %}
+
+{% block sectionName %}Components{% endblock %}
+
+{% block content %}
+
+  {% embed "components/buttons.twig" %}{% endembed %}
+
+{% endblock content %}

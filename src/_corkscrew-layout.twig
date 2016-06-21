@@ -1,0 +1,196 @@
+{% set project =
+
+  {
+    clientName: 'Acme Corporation',
+    logoPath: 'corkscrew/assets/images/logo.jpg',
+    css: ['', ''],
+    headJS: ['', ''],
+    footJS: ['', ''],
+    htmlViewer: true
+  }
+
+%}
+
+{% set colors = [
+
+  {
+    hex: "#fff",
+    label: "White"
+  },
+  {
+    hex: "#f5f4f0",
+    label: "Khaki"
+  },
+  {
+    hex: "#c3bdb9",
+    label: "Light gray"
+  },
+  {
+    hex: "#807a77",
+    label: "Gray, body copy"
+  },
+  {
+    hex: "#4a4643",
+    label: "Dark brown"
+  },
+  {
+    hex: "#222",
+    label: "Black"
+  },
+  {
+    hex: "#f8a877",
+    label: "Action - accent"
+  },
+  {
+    hex: "#f6833e",
+    label: "Action"
+  },
+  {  hex: "#fe5f2c",
+    label: "Action - active"
+  },
+  {
+    hex: "#acd3e6",
+    label: "Light blue"
+  },
+  {
+    hex: "#9dc5da",
+    label: "Blue"
+  },
+  {
+    hex: "#85abc1",
+    label: "Blue, dark accent"
+  },
+  {
+    hex: "#2d424d",
+    label: "Dark Blue"
+  }
+
+]%}
+
+{% set templates = [
+
+  {
+    name: "Site Chrome",
+    url: "http://freshtilledsoil.com"
+  },
+  {
+    name: "Home Page",
+    url: "http://freshtilledsoil.com"
+  }
+
+]%}
+
+<!doctype html>
+<html lang="en">
+<head>
+  <title>{% block sectionName %}Overview{% endblock %} &middot; {{ project.clientName }} | Style Guide</title>
+
+  <link rel="dns-prefetch" href="//ajax.googleapis.com">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="prefetch" href="{{ path_for('navigation', { 'name': 'base' }) }}">
+  <link rel="prefetch" href="{{ path_for('navigation', { 'name': 'components' }) }}">
+  <link rel="prefetch" href="{{ path_for('navigation', { 'name': 'helpers' }) }}">
+  <link rel="prefetch" href="{{ path_for('navigation', { 'name': 'modules' }) }}">
+  <link rel="prefetch" href="{{ path_for('navigation', { 'name': 'templates' }) }}">
+
+  <!-- meta cluster -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="cleartype" content="on">
+
+  <script>
+
+    WebFontConfig = {
+      google: { families: [ 'Open+Sans:400italic,700italic,400,700:latin' ] }
+    };
+
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+    })();
+
+  </script>
+
+  <noscript>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700" rel="stylesheet">
+  </noscript>
+
+  <!-- Corkscrew Core CSS -->
+  <link rel="stylesheet" href="corkscrew/assets/css/corkscrew.css">
+  <link rel="stylesheet" href="corkscrew/assets/css/corkscrew-extend.css">
+
+  <!-- CSS for {{ project.clientName }} -->
+  {% for style in project.css %}
+    <link rel="stylesheet" href="{{ style }}">
+  {% endfor %}
+
+  <!-- Head JavaScript for {{ project.clientName }} -->
+  {% for script in project.headJS %}
+    <script src="{{ script }}"></script>
+  {% endfor %}
+
+</head>
+
+<body class="cs-body">
+
+  <a href="#cs-main" class="cs-is-hidden">Skip to content</a>
+
+  <header role="banner" id="cs-banner" class="cs-banner">
+    <div class="cs-container">
+      <div class="cs-gutter cs-clearfix">
+
+        <div class="cs-nav-header">
+          <ul class="cs-is-menu-show cs-is-clean">
+            <li><a href="#cs-site-nav" id="cs-nav-menu-toggle">menu</a></li>
+          </ul>
+
+          <div class="cs-branding">
+            <img id="cs-logo-header" class="cs-logo" src="{{ project.logoPath }}" alt="Style Guide &amp;middot; {{ project.clientName }}">
+          </div><!--/.cs-branding-->
+        </div><!--/.cs-nav-header-->
+
+        <ul id="cs-site-nav" class="cs-is-clean cs-fts-nav">
+          <li class="{% if section == "overview" %}is-active{% endif %}"><a href="{{ path_for('overview') }}">Overview</a></li>
+          <li class="{% if section == "base" %}is-active{% endif %}"><a href="{{ path_for('navigation', { 'name': 'base' }) }}">Base</a></li>
+          <li class="{% if section == "components" %}is-active{% endif %}"><a href="{{ path_for('navigation', { 'name': 'components' }) }}">Components</a></li>
+          <li class="{% if section == "modules" %}is-active{% endif %}"><a href="{{ path_for('navigation', { 'name': 'modules' }) }}">Modules</a></li>
+          <li class="{% if section == "helpers" %}is-active{% endif %}"><a href="{{ path_for('navigation', { 'name': 'helpers' }) }}">Helpers</a></li>
+          <li class="{% if section == "templates" %}is-active{% endif %}"><a href="{{ path_for('navigation', { 'name': 'templates' }) }}">Templates</a>
+            <ul id="cs-templates" class="cs-site-nav-menu">
+            {% for template in templates %}
+              <li><a href="{{ template.url }}">{{ template.name }}</a></li>
+            {% endfor %}
+            </ul>
+          </li>
+
+        </ul>
+
+      </div><!--/.cs-gutter-->
+    </div><!--/.cs-container-->
+  </header>
+
+  <main role="main" id="cs-main" class="cs-main">
+
+    <div class="cs-container cs-align-normal">
+      <div class="cs-gutter">
+      {% block content %}
+      {% endblock %}
+      </div><!--/.cs-gutter-->
+    </div><!--/.cs-container-->
+  </main><!--/.cs-main-->
+
+  <script src="corkscrew/assets/js/corkscrew.js" async></script>
+  <script src="corkscrew/assets/js/corkscrew-extend.js" async></script>
+
+  <!-- Footer JavaScript for {{ project.clientName }} -->
+  {% for script in project.footJS %}
+    <script src="{{ script }}"></script>
+  {% endfor %}
+
+</body>
+</html>
