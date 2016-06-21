@@ -1,4 +1,4 @@
-# Corkscrew: Ohana, by Fresh Tilled Soil
+# Corkscrew, by Fresh Tilled Soil
 
 ### Configuration
 
