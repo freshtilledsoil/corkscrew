@@ -143,11 +143,14 @@
 
         <div class="cs-nav-header">
           <ul class="cs-is-menu-show cs-is-clean">
-            <li><a href="#cs-site-nav" id="cs-nav-menu-toggle">menu</a></li>
+            <li><a href="#cs-site-nav" id="cs-nav-menu-toggle" aria-controls="cs-site-nav">menu</a></li>
           </ul>
 
           <div class="cs-branding">
-            <img id="cs-logo-header" class="cs-logo" src="{{ project.logoPath }}" alt="Style Guide &amp;middot; {{ project.clientName }}">
+            <a href="{{ path_for('overview') }}">
+              <img id="cs-logo-header" class="cs-logo" src="{{ project.logoPath }}" alt="{{ project.clientName }} Logo">
+              <span class="cs-is-hidden">Style guide for {{ project.clientName }}</span>
+            </a>
           </div><!--/.cs-branding-->
         </div><!--/.cs-nav-header-->
 
