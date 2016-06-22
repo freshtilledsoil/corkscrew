@@ -336,16 +336,14 @@ body.cs-body {
   overflow: hidden; }
 
 .cs-content-anchor {
-  color: #666;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 80%;
   line-height: 1.4;
   display: inline-block;
   text-transform: lowercase;
   opacity: 0;
+  margin-left: 5px;
   transition: opacity linear .3s; }
-  .cs-content-anchor:hover {
-    text-decoration: none; }
 
 .cs-content-heading:hover .cs-content-anchor {
   opacity: 1; }
@@ -376,6 +374,10 @@ body.cs-body {
     color: #666;
     font-weight: 400;
     line-height: 1.5; }
+  .cs-content-heading a {
+    color: #666; }
+    .cs-content-heading a:hover, .cs-content-heading a:focus {
+      text-decoration: none; }
 
 .cs-content {
   padding: 40px;

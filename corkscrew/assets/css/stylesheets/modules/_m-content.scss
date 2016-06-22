@@ -15,19 +15,14 @@
 }
 
 .cs-content-anchor {
-  color: $color-highlight;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 80%;
   line-height: 1.4;
   display: inline-block;
   text-transform: lowercase;
   opacity: 0;
+  margin-left: 5px;
   transition: opacity linear .3s;
-
-  &:hover {
-    text-decoration: none;
-  }
-
 }
 
 .cs-content-heading:hover {
@@ -61,6 +56,17 @@
     font-weight: 400;
     line-height: 1.5;
   }
+
+  a {
+    color: $color-highlight;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+
+  }
+
 }
 
 .cs-content {
