@@ -335,6 +335,21 @@ body.cs-body {
   line-height: 1;
   overflow: hidden; }
 
+.cs-content-anchor {
+  color: #666;
+  font-weight: 400;
+  font-size: 80%;
+  line-height: 1.4;
+  display: inline-block;
+  text-transform: lowercase;
+  opacity: 0;
+  transition: opacity linear .3s; }
+  .cs-content-anchor:hover {
+    text-decoration: none; }
+
+.cs-content-heading:hover .cs-content-anchor {
+  opacity: 1; }
+
 .cs-content-heading {
   display: inline-block;
   vertical-align: middle;
