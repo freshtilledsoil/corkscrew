@@ -20,7 +20,85 @@ None of the Corkscrew CSS or JavaScript should collide with any custom code you 
 
 ## Usage
 
-Content
+This is the basic structure of the files inside Corkscrew:
+
+```
+corkscrew/
+├── assets/
+│   ├── css/
+│   │   ├── stylesheets/
+│   │   ├── corkscrew.css
+│   │   ├── corkscrew-extend.css
+│   ├── images/
+│   │   ├── logo.jpg
+│   ├── js/
+│       ├── corkscrew.js
+│       ├── corkscrew-extend.js
+│
+src/
+├── overview/
+│   ├── _index.twig
+├── */
+│   ├── _index.twig
+│   ├── *.twig
+├── _corkscrew-layout.twig
+├── _corkscrew-section.twig
+│
+.editorconfig
+.htacces
+composer.json
+index.php
+```
+
+Let's step through what they do:
+
+### Corkscrew
+
+The main guts of Corkscrew live in the /corkscrew directory. You probably won't need to go in there often unless you're customizing the framework itself (not the project files/style guide modules).
+
+*assets/css/corkscrew.css*
+
+This is the main CSS for the framework, you probably won't need to edit this. All the SCSS files live in the sibling directory, `stylesheets`.
+
+*assets/css/corkscrew-extend.css*
+
+This is a CSS file that is hooked into Corkscrew and it is where you would put small, project-base, modifications to the look and feel of the framework itself. This is good to use if your changes probably shouldn't be added into Core.
+
+*assets/js/corkscrew.js*
+
+This file hosts all the JavaScript needed to run Corkscrew (there isn't much).
+
+*assets/js/corkscrew-extend.js*
+
+If you need to add onto Corkscrew's functionality with JavaScript, this is where you would do that.
+
+### Src
+
+The `src` directory is where all your style guide elements and templates live. Corkscrew looks through this directory to assemble your style guide. The URL structure is based on the folders present in  here, so `/base` will render at `<url>/base` and so on. Inside each subdirectory there is an `_index.twig` file, these are required (unless you want to update the routing in `index.php`). They are template includes, you can have as many includes as you want inside these files (or don't use any, it's whatever you want).
+
+*_corkscrew-layout.twig*
+
+This is the main layout template for the framework, it also contains your configuration options at the top. This includes: Client Name, misc. options, any css files you need to include, any JavaScript files, and also the color palette. Crack it open and have a look.
+
+*_corkscrew-section.twig*
+
+This is the template file for a sub section inside a page.
+
+### .editorconfig
+
+This is a config file for when you're editing. [read more about editorconfig files](http://editorconfig.org/)
+
+### .htaccess
+
+This is an apache config file so all the templates map to the right URLs. It's required by the Slim PHP framework. I would just leave this alone, it should work with any apache server (you probably have one). [Read more about Slim Web Servers](http://www.slimframework.com/docs/start/web-servers.html), (read more about htaccess files)[https://httpd.apache.org/docs/current/howto/htaccess.html]
+
+### composer.json
+
+Composer is a dependency management system for PHP. This file will install everything you need to get up and started when you run `composer install` in the terminal. [Read more about Composer](https://getcomposer.org/)
+
+### index.php
+
+This is where Corkscrew ties itself together. The templating and routing is done in this file. There are 2 main routes set up for you. One is to the homepage ("overview") and the other is a wildcard path /*. Any new routes will need to be placed above the wildcard one to take precedence.
 
 ## Extending & customizing the framework
 
@@ -50,4 +128,4 @@ Corkscrew is an Open Source style guide framework created by [Fresh Tilled Soil]
 
 ## License
 
-MIT
+Code and documentation are released under the MIT license.
