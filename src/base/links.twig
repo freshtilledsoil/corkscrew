@@ -1,12 +1,7 @@
 {% embed "_corkscrew-section.twig" %}
 
-  {% block label %}
-    Links
-  {% endblock %}
-
-  {% block description %}
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et lectus et tortor placerat euismod.
-  {% endblock %}
+  {% set label = 'Links' %}
+  {% set description = 'Lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipiscing elit. Aliquam et lectus et tortor placerat euismod.' %}
 
   {% block block_content %}
 
