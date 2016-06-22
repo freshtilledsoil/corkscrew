@@ -53,8 +53,4 @@
 
   })->setName('navigation');
 
-  // Prototyping Router
-
-
-
   $app->run();
