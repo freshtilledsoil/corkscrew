@@ -2,9 +2,13 @@
 
 ### Description
 
+*Version 2 Release*
+
 Corkscrew was designed with ease of use in mind, it should get out of your way and help you create clear, helpful style guides to hand off to an implementation team. At its core it's a communication tool, but style guides can also serve as application/site road maps.
 
 None of the Corkscrew CSS or JavaScript should collide with any custom code you need for your project; it's all namespaced.
+
+This version of Corkscrew is build on the Slim PHP framework with Twig templating. [Read more about Slim](http://www.slimframework.com/) and [Twig](http://twig.sensiolabs.org/). If you're using it out of the box, it's more important to read up about Twig than Slim. You can probably use Corkscrew without even knowing what Slim is.
 
 ### Dependencies
 
