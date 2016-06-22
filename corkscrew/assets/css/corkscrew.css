@@ -17,13 +17,13 @@ body.cs-body {
   padding: 6px 12px;
   margin: 0;
   display: inline-block;
-  background: #f6833e;
+  background: #81005C;
   color: #fff;
   font-weight: 400;
   cursor: pointer;
   -webkit-font-smoothing: antialiased; }
   .cs-button:hover, .cs-button:focus {
-    background: #f4640d;
+    background: #4e0038;
     outline: 0; }
   .cs-button:active {
     background: #2d2c2a;
@@ -191,7 +191,7 @@ body.cs-body {
     .cs-fts-nav li.is-active a {
       color: #2d2c2a; }
   .cs-fts-nav a {
-    color: #888;
+    color: #767676;
     text-decoration: none;
     border-bottom: 1px solid #f0f0f0; }
     .cs-fts-nav a:hover {
@@ -207,7 +207,7 @@ body.cs-body {
         width: 24px;
         border: 0; }
       .cs-fts-nav a.cs-link-img .cs-icon-git {
-        fill: #888;
+        fill: #767676;
         -webkit-transition: all linear 0.2s;
         -moz-transition: all linear 0.2s;
         -ms-transition: all linear 0.2s;
@@ -222,15 +222,15 @@ body.cs-body {
     padding: 0; }
   .cs-is-menu-show a {
     display: block;
-    border: 1px solid #f6833e;
+    border: 1px solid #81005C;
     border-bottom: 1px solid #e3e2de;
-    background: #f6833e;
+    background: #81005C;
     text-decoration: none;
     color: #fff;
     padding: 12px 18px; }
     .cs-is-menu-show a:hover, .cs-is-menu-show a:focus {
-      background: #f4640d;
-      border: 1px solid #f4640d; }
+      background: #4e0038;
+      border: 1px solid #4e0038; }
     .cs-is-menu-show a:active {
       background: #2d2c2a;
       border-color: #000; }
@@ -400,7 +400,7 @@ body.cs-body {
   font-family: "Open Sans", Sans-serif; }
 
 .cs-template-list__item a {
-  color: #888;
+  color: #767676;
   display: block;
   text-decoration: none;
   padding: 10px 0;
@@ -464,7 +464,7 @@ body.cs-body {
     width: 48%; } }
 .cs-view-html {
   clear: both; }
-  .cs-view-html textarea {
+  .cs-view-html .cs-code-block {
     min-height: 0;
     max-height: none;
     -webkit-font-smoothing: antialiased;
@@ -488,10 +488,10 @@ body.cs-body {
     box-sizing: border-box;
     font-size: 13px;
     font-size: 0.8125rem; }
-    .cs-view-html textarea:focus {
+    .cs-view-html .cs-code-block:focus {
       background: #474643;
       outline: none; }
-    .cs-view-html textarea.cs-is-hidden {
+    .cs-view-html .cs-code-block.cs-is-hidden {
       height: 0;
       padding: 0;
       position: static; }
