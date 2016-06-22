@@ -1,11 +1,12 @@
 .cs-color-wrap {
   @include inline-block();
-  width: 15%;
+  width: 18%;
   overflow: hidden;
   font-family: $font-primary;
   margin: 0 1% $layout-gutter-multiple * 2 0;
   border: 1px solid $color-accent;
   border-radius: 3px;
+  box-sizing: border-box;
 }
 
 .cs-color-label,
@@ -31,7 +32,7 @@
 }
 
 .cs-color-hex {
- 
+
 }
 
 .cs-color {
@@ -42,30 +43,30 @@
 }
 
 @media screen and ( max-width: $breakpoint-large ) {
-  
+
   .cs-color-wrap {
     width: 23%;
   }
-  
+
 }
 
 @media screen and ( max-width: $breakpoint-mid ) {
-  
+
   .cs-color-label {
     width: 64px;
   }
-  
+
   .cs-color-label,
   .cs-color-hex {
     @include font-size(11);
   }
-  
+
 }
 
 @media screen and ( max-width: $breakpoint-small ) {
-  
+
   .cs-color-wrap {
     width: 48%;
   }
-  
+
 }
