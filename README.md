@@ -90,7 +90,7 @@ This is a config file for when you're editing. [read more about editorconfig fil
 
 ### .htaccess
 
-This is an apache config file so all the templates map to the right URLs. It's required by the Slim PHP framework. I would just leave this alone, it should work with any apache server (you probably have one). [Read more about Slim Web Servers](http://www.slimframework.com/docs/start/web-servers.html), (read more about htaccess files)[https://httpd.apache.org/docs/current/howto/htaccess.html]
+This is an apache config file so all the templates map to the right URLs. It's required by the Slim PHP framework. I would just leave this alone, it should work with any apache server (you probably have one). [Read more about Slim Web Servers](http://www.slimframework.com/docs/start/web-servers.html), [read more about htaccess files](https://httpd.apache.org/docs/current/howto/htaccess.html)
 
 ### composer.json
 
@@ -124,7 +124,7 @@ If you need extra functionality in the framework itself (outside of the stylegui
 
 Corkscrew is an Open Source style guide framework created by [Fresh Tilled Soil](http://freshtilledsoil.com), an experience design agency out of Boston. We use this on all of our projects and we welcome you to  do the same!
 
-- [Tim Wright](http://github.com/timwright12)
+- [Tim Wright](http://github.com/timwright12) ( [@csskarma](http://twitter.com/csskarma) )
 
 ## License
 
