@@ -4,7 +4,7 @@
 
 *Version 2 Release*
 
-Corkscrew was designed with ease of use in mind, it should get out of your way and help you create clear, helpful style guides to hand off to an implementation team. At its core it's a communication tool, but style guides can also serve as application/site road maps.
+*Corkscrew is a style guide framework*. It was designed with ease of use in mind, it should get out of your way and help you create clear, helpful style guides to hand off to an implementation team. At its core it's a communication tool, but style guides can also serve as application/site road maps.
 
 None of the Corkscrew CSS or JavaScript should collide with any custom code you need for your project; it's all namespaced.
 
