@@ -37,6 +37,37 @@ body.cs-body {
   *vertical-align: auto;
   float: right; }
 
+.cs-table-wrap {
+  overflow: auto; }
+
+.cs-link, .cs-table a, .cs-fts-nav a, .cs-template-list__item a {
+  font-family: "Open Sans", Sans-serif;
+  color: #767676;
+  text-decoration: none;
+  border-bottom: 1px solid #eee; }
+  .cs-link:hover, .cs-table a:hover, .cs-fts-nav a:hover, .cs-template-list__item a:hover, .cs-link:focus, .cs-table a:focus, .cs-fts-nav a:focus, .cs-template-list__item a:focus {
+    text-decoration: none;
+    color: #363E40;
+    border-bottom-color: #C3BDB9; }
+
+.cs-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 14px;
+  font-size: 0.875rem; }
+  .cs-table td, .cs-table th {
+    border: 1px solid #eee;
+    padding: 10px;
+    text-align: left;
+    font-family: "Open Sans", Sans-serif;
+    vertical-align: top; }
+  .cs-table th {
+    font-weight: 400;
+    background: #eee;
+    text-transform: uppercase;
+    border-color: #fff; }
+
 .cs-container {
   max-width: 1000px;
   margin: auto; }
@@ -61,7 +92,7 @@ body.cs-body {
 
 @media screen and (max-width: 800px) {
   .cs-main > .cs-container {
-    padding-top: 60px;
+    padding-top: 45px;
     padding-left: 0; }
 
   .cs-gutter {
@@ -179,6 +210,11 @@ body.cs-body {
   margin-top: 20px;
   padding-top: 15px;
   border-top: 1px solid #C3BDB9; }
+  @media screen and (max-width: 800px) {
+    .cs-fts-nav {
+      font-size: 14px;
+      font-size: 0.875rem;
+      min-width: 200px; } }
   .cs-fts-nav li {
     line-height: 2.2em;
     position: relative;
@@ -188,31 +224,32 @@ body.cs-body {
       left: auto;
       right: -17px;
       opacity: 1; }
-    .cs-fts-nav li.is-active a {
+    .cs-fts-nav li.is-active > a {
       color: #363E40; }
-  .cs-fts-nav a {
-    color: #767676;
-    text-decoration: none;
-    border-bottom: 1px solid #eee; }
-    .cs-fts-nav a:hover {
-      text-decoration: none;
-      color: #363E40;
-      border-bottom-color: #C3BDB9; }
-    .cs-fts-nav a.cs-link-img {
+      .cs-fts-nav li.is-active > a:before {
+        content: "";
+        display: inline-block;
+        border: 6px solid transparent;
+        border-left-color: #363E40;
+        margin-right: -2px; }
+        @media screen and (max-width: 800px) {
+          .cs-fts-nav li.is-active > a:before {
+            border-left-color: #fff; } }
+  .cs-fts-nav a.cs-link-img {
+    border: 0; }
+    .cs-fts-nav a.cs-link-img:hover .cs-icon-git {
+      fill: #363E40; }
+    .cs-fts-nav a.cs-link-img svg {
+      height: 24px;
+      width: 24px;
       border: 0; }
-      .cs-fts-nav a.cs-link-img:hover .cs-icon-git {
-        fill: #363E40; }
-      .cs-fts-nav a.cs-link-img svg {
-        height: 24px;
-        width: 24px;
-        border: 0; }
-      .cs-fts-nav a.cs-link-img .cs-icon-git {
-        fill: #767676;
-        -webkit-transition: all linear 0.2s;
-        -moz-transition: all linear 0.2s;
-        -ms-transition: all linear 0.2s;
-        -o-transition: all linear 0.2s;
-        transition: all linear 0.2s; }
+    .cs-fts-nav a.cs-link-img .cs-icon-git {
+      fill: #767676;
+      -webkit-transition: all linear 0.2s;
+      -moz-transition: all linear 0.2s;
+      -ms-transition: all linear 0.2s;
+      -o-transition: all linear 0.2s;
+      transition: all linear 0.2s; }
 
 .cs-is-menu-show {
   display: none;
@@ -402,12 +439,7 @@ body.cs-body {
 .cs-template-list__item a {
   color: #767676;
   display: block;
-  text-decoration: none;
-  padding: 10px 0;
-  border-bottom: 1px solid #eee; }
-  .cs-template-list__item a:hover, .cs-template-list__item a:focus {
-    color: #363E40;
-    border-bottom-color: #C3BDB9; }
+  padding: 10px 0; }
 
 .cs-color-wrap {
   display: inline-block;
@@ -533,5 +565,24 @@ body.cs-body {
     transform: scale(1); }
   100% {
     transform: scale(0.9); } }
+.cs-msg {
+  background: #767676;
+  padding: 10px;
+  text-align: center; }
+  .cs-msg p {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", Sans-serif;
+    color: #fff;
+    font-size: 14px;
+    font-size: 0.875rem; }
+    .cs-msg p + p {
+      margin-top: 10px; }
+  .cs-msg a {
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    text-decoration: none; }
+    .cs-msg a:hover, .cs-msg a:focus {
+      border-bottom-color: #fff; }
 
 /*# sourceMappingURL=corkscrew.css.map */

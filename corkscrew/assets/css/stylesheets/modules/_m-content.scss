@@ -95,18 +95,10 @@
 .cs-template-list__item {
 
   a {
+    @extend .cs-link;
     color: $color-action;
     display: block;
-    text-decoration: none;
     padding: 10px 0;
-    border-bottom: 1px solid $color-secondary;
-    //transition: all linear 0.2s;
-
-    &:hover, &:focus {
-      color: $color-primary;
-      border-bottom-color: $color-accent;
-    }
-
   }
 
 }

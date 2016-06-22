@@ -1,8 +1,9 @@
 {% set project =
 
   {
-    clientName: 'Acme Corporation',
+    clientName: 'Fresh Tilled Soil',
     logoPath: 'corkscrew/assets/images/logo.jpg',
+    repositoryUrl: 'http://github.com/freshtilledsoil/corkscrew',
     css: ['', ''],
     headJS: ['', ''],
     footJS: ['', ''],
@@ -156,40 +157,12 @@
 
         <ul id="cs-site-nav" class="cs-is-clean cs-fts-nav">
           <li class="{% if section == "overview" %}is-active{% endif %}">
-            <a href="{{ path_for('overview') }}">
-              {% if section == "overview" %}<img src="../corkscrew/assets/images/caret-right.svg" alt="This is the current page">{% endif %}
-              Overview
-            </a>
-          </li>
-          <li class="{% if section == "base" %}is-active{% endif %}">
-            <a href="{{ path_for('navigation', { 'name': 'base' }) }}">
-              {% if section == "base" %}<img src="../corkscrew/assets/images/caret-right.svg" alt="This is the current page">{% endif %}
-              Base
-            </a>
-          </li>
-          <li class="{% if section == "components" %}is-active{% endif %}">
-            <a href="{{ path_for('navigation', { 'name': 'components' }) }}">
-              {% if section == "components" %}<img src="../corkscrew/assets/images/caret-right.svg" alt="This is the current page">{% endif %}
-              Components
-            </a>
-          </li>
-          <li class="{% if section == "modules" %}is-active{% endif %}">
-            <a href="{{ path_for('navigation', { 'name': 'modules' }) }}">
-              {% if section == "modules" %}<img src="../corkscrew/assets/images/caret-right.svg" alt="This is the current page">{% endif %}
-              Modules
-            </a>
-          </li>
-          <li class="{% if section == "helpers" %}is-active{% endif %}">
-            <a href="{{ path_for('navigation', { 'name': 'helpers' }) }}">
-              {% if section == "helpers" %}<img src="../corkscrew/assets/images/caret-right.svg" alt="This is the current page">{% endif %}
-              Helpers
-            </a>
-          </li>
-          <li class="{% if section == "templates" %}is-active{% endif %}">
-            <a href="{{ path_for('navigation', { 'name': 'templates' }) }}">
-              {% if section == "templates" %}<img src="../corkscrew/assets/images/caret-right.svg" alt="This is the current page">{% endif %}
-              Templates
-            </a>
+          <a href="{{ path_for('overview') }}">Overview</a></li>
+          <li class="{% if section == "base" %}is-active{% endif %}"><a href="{{ path_for('navigation', { 'name': 'base' }) }}">Base</a></li>
+          <li class="{% if section == "components" %}is-active{% endif %}"><a href="{{ path_for('navigation', { 'name': 'components' }) }}">Components</a></li>
+          <li class="{% if section == "modules" %}is-active{% endif %}"><a href="{{ path_for('navigation', { 'name': 'modules' }) }}">Modules</a></li>
+          <li class="{% if section == "helpers" %}is-active{% endif %}"><a href="{{ path_for('navigation', { 'name': 'helpers' }) }}">Helpers</a></li>
+          <li class="{% if section == "templates" %}is-active{% endif %}"><a href="{{ path_for('navigation', { 'name': 'templates' }) }}">Templates</a>
             <ul id="cs-templates" class="cs-site-nav-menu">
             {% for template in templates %}
               <li><a href="{{ template.url }}">{{ template.name }}</a></li>
@@ -206,6 +179,13 @@
   <main role="main" id="cs-main" class="cs-main">
 
     <div class="cs-container cs-align-normal">
+
+    {% if project.repositoryUrl %}
+      <div class="cs-msg">
+        <p><a href="{{ project.repositoryUrl }}">View the repository for this project</a></p>
+      </div><!--/.cs-msg-->
+    {% endif %}
+
       <div class="cs-gutter">
       {% block content %}
       {% endblock %}

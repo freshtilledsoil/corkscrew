@@ -5,6 +5,11 @@
   padding-top: 15px;
   border-top: 1px solid $color-accent;
 
+  @media screen and ( max-width: $breakpoint-mid ) {
+    @include font-size(14);
+    min-width: 200px;
+  }
+
   li {
     line-height: 2.2em;
     position: relative;
@@ -21,24 +26,29 @@
     }
 
     &.is-active {
-      a {
+      > a {
         color: $color-primary;
+
+        &:before {
+          content: "";
+          display: inline-block;
+          border: 6px solid transparent;
+          border-left-color: $color-primary;
+          margin-right: -2px;
+
+          @media screen and ( max-width: $breakpoint-mid ) {
+            border-left-color: $color-base;
+          }
+
+        }
+
       }
     }
 
   } // li
 
   a {
-    color: $color-action;
-    text-decoration: none;
-    border-bottom: 1px solid $color-secondary;
-    //@include transition(all linear .2s);
-
-    &:hover {
-      text-decoration: none;
-      color: $color-primary;
-      border-bottom-color: $color-accent;
-    }
+    @extend .cs-link;
 
      &.cs-link-img {
       border: 0;
