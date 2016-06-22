@@ -73,6 +73,11 @@
   padding: $layout-gutter-multiple * 4;
   background: $color-base;
   border-radius: 2px;
+
+  @media screen and ( max-width: $breakpoint-mid ) {
+    padding: $layout-gutter-multiple * 2;
+  }
+
 }
 
 .cs-message {

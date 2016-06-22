@@ -420,6 +420,9 @@ body.cs-body {
   padding: 40px;
   background: #fff;
   border-radius: 2px; }
+  @media screen and (max-width: 800px) {
+    .cs-content {
+      padding: 20px; } }
 
 .cs-message p {
   margin: 0;
