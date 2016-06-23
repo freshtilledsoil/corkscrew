@@ -197,8 +197,12 @@ body.cs-body {
     background: #fff;
     padding-left: 10px;
     border-bottom: 1px solid #C3BDB9;
-    border-right: 1px solid #C3BDB9; }
+    border-right: 1px solid #C3BDB9; } }
+  @media screen and (max-width: 800px) and (max-width: 800px) {
+    .cs-branding {
+      border-bottom: 0; } }
 
+@media screen and (max-width: 800px) {
   .cs-logo {
     max-width: none;
     max-height: 33px;
@@ -260,7 +264,6 @@ body.cs-body {
   .cs-is-menu-show a {
     display: block;
     border: 1px solid #81005C;
-    border-bottom: 1px solid #C3BDB9;
     background: #81005C;
     text-decoration: none;
     color: #fff;

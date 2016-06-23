@@ -44,6 +44,11 @@
     padding-left: $layout-gutter-multiple;
     border-bottom: 1px solid $color-accent;
     border-right: 1px solid $color-accent;
+
+    @media screen and ( max-width: $breakpoint-mid ) {
+      border-bottom: 0;
+    }
+
   }
 
   .cs-logo {
