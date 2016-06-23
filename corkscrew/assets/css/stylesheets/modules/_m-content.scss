@@ -12,6 +12,17 @@
   padding: $layout-gutter-multiple * 2 0 0 0;
   line-height: 1;
   overflow: hidden;
+
+  @media screen and ( max-width: $breakpoint-mid ) {
+
+    .cs-button {
+      margin-bottom: 15px;
+      margin-top: -5px;
+      width: 100%;
+    }
+
+  }
+
 }
 
 .cs-content-anchor {
@@ -33,6 +44,10 @@
   @include inline-block(middle);
   margin-bottom: 15px;
   max-width: 66%;
+
+  @media screen and ( max-width: $breakpoint-mid ) {
+    max-width: none;
+  }
 
   h1 {
     font-family: $font-primary;

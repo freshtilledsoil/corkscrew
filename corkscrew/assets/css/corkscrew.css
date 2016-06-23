@@ -374,6 +374,11 @@ body.cs-body {
   padding: 20px 0 0 0;
   line-height: 1;
   overflow: hidden; }
+  @media screen and (max-width: 800px) {
+    .cs-content-header .cs-button {
+      margin-bottom: 15px;
+      margin-top: -5px;
+      width: 100%; } }
 
 .cs-content-anchor {
   font-weight: 700;
@@ -396,6 +401,9 @@ body.cs-body {
   *vertical-align: auto;
   margin-bottom: 15px;
   max-width: 66%; }
+  @media screen and (max-width: 800px) {
+    .cs-content-heading {
+      max-width: none; } }
   .cs-content-heading h1 {
     font-family: "Open Sans", Sans-serif;
     font-style: normal;
