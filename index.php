@@ -43,6 +43,17 @@
     return $this->view->render($response, 'overview/_index.twig');
   })->setName('overview');
 
+  // API Routing
+  $app->get( '/{name}/{item}/json', function ($request, $response, $args ) {
+
+    return $this->view->render($response, $args['name'] . '/' . $args['item'] . '.twig', [
+      'name' => $args['name'],
+      'item' => $args['item'],
+      'function' => 'json'
+    ]);
+
+  })->setName('api');
+
   // General application routes (this will just check for a folder, if it exists, cool, if not, 404)
 
   $app->get( '/{name}', function ($request, $response, $args ) {

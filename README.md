@@ -118,6 +118,12 @@ If you need to customize the framework for your organization (or client), you wo
 
 If you need extra functionality in the framework itself (outside of the styleguide), you would do so in corkscrew-extend.js. We don't recommend using corkscrew.js for customizing the interface, which is the main Javascript file for the application, because it could affect upgrades.
 
+## API
+
+Each element has a JSON output version routed to {baseURL}/{section}/{element}/json.
+
+For example, JSON for buttons can be accessed via: http://localhost:8080/components/buttons/json
+
 ## Contributing
 
 1. Fork it!

@@ -1,22 +1,20 @@
-{% embed "_corkscrew-section.twig" %}
+{% extends function == 'json' ? '_corkscrew-api.twig' : '_corkscrew-section.twig' %}
 
-  {% set label = 'Lists' %}
-  {% set description = 'Lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipiscing elit. Aliquam et lectus et tortor placerat euismod.' %}
+{% set label = 'Lists' %}
+{% set description = 'Lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipiscing elit. Aliquam et lectus et tortor placerat euismod.' %}
 
-  {% block block_content %}
+{% block block_content %}
 
 <ul>
-  <li>List item</li>
-  <li>List item</li>
-  <li>List item</li>
+<li>List item</li>
+<li>List item</li>
+<li>List item</li>
 </ul>
 
 <ol>
-  <li>List item</li>
-  <li>List item</li>
-  <li>List item</li>
+<li>List item</li>
+<li>List item</li>
+<li>List item</li>
 </ol>
 
-  {% endblock %}
-
-{% endembed %}
+{% endblock %}
