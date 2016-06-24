@@ -1,7 +1,7 @@
 {
   "name": "Corkscrew",
-  "description": "A style guide framework by Fresh Tilled Soil http://acme.ftsdev.com/styleguide"
-  "version": "2.0"
+  "description": "A style guide framework by Fresh Tilled Soil http://acme.ftsdev.com/styleguide",
+  "version": "2.0",
   "authors" : [
     "Tim Wright <timwright@csskarma.com>"
   ],
