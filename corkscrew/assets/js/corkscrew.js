@@ -12,16 +12,15 @@
 
   // Start defining methods here
   Corkscrew.init = function() {
+
     Corkscrew.addHTMLView();
 
     doc.getElementById('cs-nav-menu-toggle').addEventListener('click', function(e){
 
       e.preventDefault();
-
       doc.getElementById('cs-site-nav').classList.toggle('is-open');
 
     }, false);
-
 
   };
 
