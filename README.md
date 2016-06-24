@@ -47,6 +47,7 @@ src/
 ├── */
 │   ├── _index.twig
 │   ├── *.twig
+├── _corkscrew-api.twig
 ├── _corkscrew-layout.twig
 ├── _corkscrew-section.twig
 │
@@ -81,6 +82,10 @@ If you need to add onto Corkscrew's functionality with JavaScript, this is where
 ### Src
 
 The `src` directory is where all your style guide elements and templates live. Corkscrew looks through this directory to assemble your style guide. The URL structure is based on the folders present in  here, so `/base` will render at `<url>/base` and so on. Inside each subdirectory there is an `_index.twig` file, these are required (unless you want to update the routing in `index.php`). They are template includes, you can have as many includes as you want inside these files (or don't use any, it's whatever you want).
+
+*_corkscrew-api.twig*
+
+This is a JSON template for the API.
 
 *_corkscrew-layout.twig*
 
