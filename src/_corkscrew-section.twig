@@ -1,3 +1,4 @@
+{% spaceless %}
 <section id="{{ label|replace({' ': '-'})|lower }}" class="cs-content-section {% if project.htmlViewer == true %}generate-html{% endif %}">
 
   <header class="cs-content-header">
@@ -9,6 +10,11 @@
 </header><!--/.cs-content-header-->
 
   <div class="cs-content">
-    {% block block_content %}{% endblock %}
+
+{% endspaceless %}
+{% block block_content %}{% endblock %}
+{% spaceless %}
+
   </div><!--/.cs-content-->
 </section><!--/.cs-content-section-->
+{% endspaceless %}

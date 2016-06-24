@@ -10,6 +10,8 @@
   use \Psr\Http\Message\ServerRequestInterface as Request;
   use \Psr\Http\Message\ResponseInterface as Response;
 
+
+
   // Initializing the $app object
   $app = new \Slim\App();
 
@@ -21,7 +23,7 @@
   */
 
   $container['view'] = function ( $container ) {
-    $view = new \Slim\Views\Twig('src', [
+    $view = new \Slim\Views\Twig(['src','corkscrew'], [
       'debug' => true,
       'cache' => false
     ]);

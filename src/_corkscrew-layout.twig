@@ -77,29 +77,32 @@
   }
 
 ]%}
-
 <!doctype html>
 <html lang="en">
 <head>
+{% spaceless %}
+
   <title>{% block sectionName %}Overview{% endblock %} &middot; {{ project.clientName }} | Style Guide</title>
 
   <link rel="dns-prefetch" href="//ajax.googleapis.com">
   <link rel="dns-prefetch" href="//fonts.googleapis.com">
-  <link rel="prefetch" href="{{ path_for('navigation', { 'name': 'base' }) }}">
-  <link rel="prefetch" href="{{ path_for('navigation', { 'name': 'components' }) }}">
-  <link rel="prefetch" href="{{ path_for('navigation', { 'name': 'helpers' }) }}">
-  <link rel="prefetch" href="{{ path_for('navigation', { 'name': 'modules' }) }}">
-  <link rel="prefetch" href="{{ path_for('navigation', { 'name': 'templates' }) }}">
 
   <!-- meta cluster -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="cleartype" content="on">
 
+  <link rel="icon" type="image/png" href="corkscrew/assets/images/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="corkscrew/assets/images/favicon-16x16.png" sizes="16x16">
+
+  <!--[if IE]>
+    <link rel="shortcut icon" href="corkscrew/assets/images/browser-icons/favicon.ico">
+  <![endif]-->
+
   <script>
 
     WebFontConfig = {
-      google: { families: [ 'Open+Sans:400italic,700italic,400,700:latin' ] }
+      google: { families: [ 'Open+Sans:400,700:latin' ] }
     };
 
     (function() {
@@ -115,12 +118,15 @@
   </script>
 
   <noscript>
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
   </noscript>
 
   <!-- Corkscrew Core CSS -->
-  <link rel="stylesheet" href="corkscrew/assets/css/corkscrew.css">
-  <link rel="stylesheet" href="corkscrew/assets/css/corkscrew-extend.css">
+
+  <style>
+  {% include 'assets/css/corkscrew.css' %}
+  {% include 'assets/css/corkscrew-extend.css' %}
+  </style>
 
   <!-- CSS for {{ project.clientName }} -->
   {% for style in project.css %}
@@ -132,9 +138,12 @@
     <script src="{{ script }}"></script>
   {% endfor %}
 
+{% endspaceless %}
 </head>
 
 <body class="cs-body">
+
+{% spaceless %}
 
   <a href="#cs-main" class="cs-is-hidden">Skip to content</a>
 
@@ -176,6 +185,7 @@
     </div><!--/.cs-container-->
   </header>
 
+
   <main role="main" id="cs-main" class="cs-main">
 
     <div class="cs-container cs-align-normal">
@@ -187,19 +197,27 @@
     {% endif %}
 
       <div class="cs-gutter">
+{% endspaceless %}
+
       {% block content %}
       {% endblock %}
+
+{% spaceless %}
       </div><!--/.cs-gutter-->
     </div><!--/.cs-container-->
   </main><!--/.cs-main-->
 
-  <script src="corkscrew/assets/js/corkscrew.js" async></script>
-  <script src="corkscrew/assets/js/corkscrew-extend.js" async></script>
+  <script>
+    {% include 'assets/js/corkscrew.js' %}
+    {% include 'assets/js/corkscrew-extend.js' %}
+  </script>
 
   <!-- Footer JavaScript for {{ project.clientName }} -->
   {% for script in project.footJS %}
     <script src="{{ script }}"></script>
   {% endfor %}
+
+{% endspaceless %}
 
 </body>
 </html>
