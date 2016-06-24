@@ -86,6 +86,12 @@
 
   <link rel="dns-prefetch" href="//ajax.googleapis.com">
   <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="prefetch" href="{{ path_for('navigation', { 'name': 'overview' }) }}">
+  <link rel="prefetch" href="{{ path_for('navigation', { 'name': 'base' }) }}">
+  <link rel="prefetch" href="{{ path_for('navigation', { 'name': 'components' }) }}">
+  <link rel="prefetch" href="{{ path_for('navigation', { 'name': 'modules' }) }}">
+  <link rel="prefetch" href="{{ path_for('navigation', { 'name': 'helpers' }) }}">
+  <link rel="prefetch" href="{{ path_for('navigation', { 'name': 'templates' }) }}">
 
   <!-- meta cluster -->
   <meta charset="utf-8">
@@ -138,12 +144,9 @@
     <script src="{{ script }}"></script>
   {% endfor %}
 
-{% endspaceless %}
 </head>
 
 <body class="cs-body">
-
-{% spaceless %}
 
   <a href="#cs-main" class="cs-is-hidden">Skip to content</a>
 
