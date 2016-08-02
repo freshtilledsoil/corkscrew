@@ -9,10 +9,16 @@
 {% extends function == 'json' ? '_corkscrew-api.twig' : '_corkscrew-section.twig' %}
 
 {% set label = 'Documentation' %}
-{% set description = 'Lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipiscing elit. Aliquam et lectus et tortor placerat euismod.' %}
+{% set description = 'Beyond the style guide, we have provided the following additional sources of documentation to further explain our deliverables, as well as links to 3rd party resources.' %}
 
 {% block block_content %}
 
-<p>Content</p>
+<ul>
+  <li>
+    <a href="#!">
+      Document Title
+    </a>
+  </li>
+</ul>
 
 {% endblock %}
