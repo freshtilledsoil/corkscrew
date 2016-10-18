@@ -91,7 +91,7 @@
         contentTextArea.innerHTML = moduleHTMLContent.replace(/^(\r\n)|(\n)/,'').replace(/^(\r\n)|(\n)/,'');
         contentTextArea.classList.add('cs-is-hidden');
         contentTextArea.spellcheck = false;
-        contentTextArea.disabled = true;
+        contentTextArea.setAttribute('readonly', '');
 
         moduleHeader.appendChild(contentLabel);
         moduleHeader.appendChild(expandButton);
