@@ -1,4 +1,3 @@
-
 ;(function (w, doc) {
 
   // Enable strict mode
