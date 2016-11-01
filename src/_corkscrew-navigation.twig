@@ -23,13 +23,4 @@
     Helpers
   </a>
 </li>
-<li class="{% if section == "templates" %}is-active{% endif %}">
-  <a href="{{ path_for('navigation', { 'name': 'templates' }) }}">
-    Templates
-  </a>
-  <ul id="cs-templates" class="cs-site-nav-menu">
-  {% for template in templates %}
-    <li><a href="{{ template.url }}">{{ template.name }}</a></li>
-  {% endfor %}
-  </ul>
-</li>
+

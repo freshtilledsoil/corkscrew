@@ -7,7 +7,8 @@
     css: ['', ''],
     headJS: ['', ''],
     footJS: ['', ''],
-    htmlViewer: true
+    htmlViewer: true,
+    showTemplates: true
   }
 
 %}{% set colors = [
@@ -152,7 +153,9 @@
           <div class="cs-branding">
             <a href="{{ path_for('overview') }}">
               <img id="cs-logo-header" class="cs-logo" src="{{ project.logoPath }}" alt="">
-              <span class="cs-is-hidden">Style guide for {{ project.clientName }}</span>
+              <span class="cs-is-hidden">
+                Style guide for {{ project.clientName }}
+              </span>
             </a>
           </div><!--/.cs-branding-->
 
@@ -167,6 +170,19 @@
 
         <ul id="cs-site-nav" class="cs-is-clean cs-fts-nav">
           {% include '_corkscrew-navigation.twig' %}
+          <!-- populate templates here -->
+          <li class="{% if section == "templates" %}is-active{% endif %}">
+            <a href="{{ path_for('navigation', { 'name': 'templates' }) }}">
+              Templates
+            </a>
+            {% if project.showTemplates == true %}
+              <ul id="cs-templates" class="cs-site-nav-menu">
+              {% for template in templates %}
+                <li><a href="{{ template.url }}">{{ template.name }}</a></li>
+              {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
         </ul>
 
       </nav><!--/.cs-gutter-->
