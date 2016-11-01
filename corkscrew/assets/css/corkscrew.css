@@ -180,6 +180,20 @@ body.cs-body {
   display: block;
   max-width: 100%; }
 
+.cs-skip-link {
+  background: #363E40;
+  color: #fff;
+  left: -9999px;
+  padding: 8px;
+  opacity: 0;
+  position: fixed;
+  text-decoration: none;
+  z-index: 99999;}
+
+.cs-skip-link:focus {
+  left: 0;
+  opacity: 1; }
+
 @media screen and (max-width: 800px) {
   .cs-banner {
     overflow: auto;

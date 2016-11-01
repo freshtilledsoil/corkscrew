@@ -3,11 +3,15 @@
 
   <header class="cs-content-header">
     <div class="cs-content-heading">
-    <h1>{{ label }} <a href="#{{ label|replace({' ': '-'})|lower }}" class="cs-content-anchor">#{{ label|replace({' ': '-'})|lower }}</a></h1>
-    <p>{{ description|raw }}</p>
-  </div>
+      <h1>
+        {{ label }} <a href="#{{ label|replace({' ': '-'})|lower }}" class="cs-content-anchor">#{{ label|replace({' ': '-'})|lower }}</a>
+      </h1>
+      <p>
+        {{ description|raw }}
+      </p>
+    </div>
 
-</header><!--/.cs-content-header-->
+  </header><!--/.cs-content-header-->
 
   <div class="cs-content">
 
