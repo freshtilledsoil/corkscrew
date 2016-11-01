@@ -184,7 +184,7 @@ body.cs-body {
   .cs-banner {
     overflow: auto;
     -webkit-overflow-scrolling: touch;
-    width: auto;
+    width: 100%;
     border: 0;
     background: none;
     bottom: auto; }
@@ -192,15 +192,14 @@ body.cs-body {
       padding: 0; }
 
   .cs-nav-header {
-    display: table; }
+    display: table;
+    width: 100%; }
 
   .cs-branding {
     display: table-cell;
     vertical-align: middle;
-    background: #fff;
     padding-left: 10px;
-    border-bottom: 1px solid #C3BDB9;
-    border-right: 1px solid #C3BDB9; } }
+    border-bottom: 1px solid #C3BDB9;  } }
   @media screen and (max-width: 800px) and (max-width: 800px) {
     .cs-branding {
       border-bottom: 0; } }
@@ -260,6 +259,7 @@ body.cs-body {
 
 .cs-is-menu-show {
   display: none;
+  float: right;
   font-family: "Open Sans", Sans-serif; }
   .cs-is-menu-show li {
     margin: 0;

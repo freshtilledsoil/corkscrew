@@ -1,0 +1,35 @@
+<li class="{% if section == "overview" %}is-active{% endif %}">
+  <a href="{{ path_for('overview') }}">
+    Overview
+  </a>
+</li>
+<li class="{% if section == "base" %}is-active{% endif %}">
+  <a href="{{ path_for('navigation', { 'name': 'base' }) }}">
+    Base
+  </a>
+</li>
+<li class="{% if section == "components" %}is-active{% endif %}">
+  <a href="{{ path_for('navigation', { 'name': 'components' }) }}">
+    Components
+  </a>
+</li>
+<li class="{% if section == "modules" %}is-active{% endif %}">
+  <a href="{{ path_for('navigation', { 'name': 'modules' }) }}">
+    Modules
+  </a>
+</li>
+<li class="{% if section == "helpers" %}is-active{% endif %}">
+  <a href="{{ path_for('navigation', { 'name': 'helpers' }) }}">
+    Helpers
+  </a>
+</li>
+<li class="{% if section == "templates" %}is-active{% endif %}">
+  <a href="{{ path_for('navigation', { 'name': 'templates' }) }}">
+    Templates
+  </a>
+  <ul id="cs-templates" class="cs-site-nav-menu">
+  {% for template in templates %}
+    <li><a href="{{ template.url }}">{{ template.name }}</a></li>
+  {% endfor %}
+  </ul>
+</li>

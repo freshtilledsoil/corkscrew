@@ -24,7 +24,6 @@
     hex: "#eeeeee",
     label: "Lighter Gray"
   },
-
   {
     hex: "#c3bdb9",
     label: "Light gray"
@@ -142,43 +141,36 @@
 
 <body class="cs-body">
 
-  <a href="#cs-main" class="cs-is-hidden">Skip to content</a>
+  <a href="#cs-main" class="cs-is-hidden">
+    Skip to content
+  </a>
 
   <header role="banner" id="cs-banner" class="cs-banner">
     <div class="cs-container">
-      <div class="cs-gutter cs-clearfix">
+      <nav class="cs-gutter cs-clearfix">
 
         <div class="cs-nav-header">
-          <ul class="cs-is-menu-show cs-is-clean">
-            <li><a href="#cs-site-nav" id="cs-nav-menu-toggle" aria-controls="cs-site-nav">menu</a></li>
-          </ul>
-
           <div class="cs-branding">
             <a href="{{ path_for('overview') }}">
-              <img id="cs-logo-header" class="cs-logo" src="{{ project.logoPath }}" alt="{{ project.clientName }} Logo">
+              <img id="cs-logo-header" class="cs-logo" src="{{ project.logoPath }}" alt="">
               <span class="cs-is-hidden">Style guide for {{ project.clientName }}</span>
             </a>
           </div><!--/.cs-branding-->
+
+          <div class="cs-is-menu-show">
+            <a href="#cs-site-nav"
+              id="cs-nav-menu-toggle"
+              aria-controls="cs-site-nav">
+              Menu
+            </a>
+          </div>
         </div><!--/.cs-nav-header-->
 
         <ul id="cs-site-nav" class="cs-is-clean cs-fts-nav">
-          <li class="{% if section == "overview" %}is-active{% endif %}">
-          <a href="{{ path_for('overview') }}">Overview</a></li>
-          <li class="{% if section == "base" %}is-active{% endif %}"><a href="{{ path_for('navigation', { 'name': 'base' }) }}">Base</a></li>
-          <li class="{% if section == "components" %}is-active{% endif %}"><a href="{{ path_for('navigation', { 'name': 'components' }) }}">Components</a></li>
-          <li class="{% if section == "modules" %}is-active{% endif %}"><a href="{{ path_for('navigation', { 'name': 'modules' }) }}">Modules</a></li>
-          <li class="{% if section == "helpers" %}is-active{% endif %}"><a href="{{ path_for('navigation', { 'name': 'helpers' }) }}">Helpers</a></li>
-          <li class="{% if section == "templates" %}is-active{% endif %}"><a href="{{ path_for('navigation', { 'name': 'templates' }) }}">Templates</a>
-            <ul id="cs-templates" class="cs-site-nav-menu">
-            {% for template in templates %}
-              <li><a href="{{ template.url }}">{{ template.name }}</a></li>
-            {% endfor %}
-            </ul>
-          </li>
-
+          {% include '_corkscrew-navigation.twig' %}
         </ul>
 
-      </div><!--/.cs-gutter-->
+      </nav><!--/.cs-gutter-->
     </div><!--/.cs-container-->
   </header>
 
@@ -189,7 +181,11 @@
 
     {% if project.repositoryUrl %}
       <div class="cs-msg">
-        <p><a href="{{ project.repositoryUrl }}">View the repository for this project</a></p>
+        <p>
+          <a href="{{ project.repositoryUrl }}">
+            View the repository for this project
+          </a>
+        </p>
       </div><!--/.cs-msg-->
     {% endif %}
 
