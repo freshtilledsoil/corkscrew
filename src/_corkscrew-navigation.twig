@@ -1,26 +1,33 @@
-<li class="{% if section == "overview" %}is-active{% endif %}">
-  <a href="{{ path_for('overview') }}">
-    Overview
-  </a>
-</li>
-<li class="{% if section == "base" %}is-active{% endif %}">
-  <a href="{{ path_for('navigation', { 'name': 'base' }) }}">
-    Base
-  </a>
-</li>
-<li class="{% if section == "components" %}is-active{% endif %}">
-  <a href="{{ path_for('navigation', { 'name': 'components' }) }}">
-    Components
-  </a>
-</li>
-<li class="{% if section == "modules" %}is-active{% endif %}">
-  <a href="{{ path_for('navigation', { 'name': 'modules' }) }}">
-    Modules
-  </a>
-</li>
-<li class="{% if section == "helpers" %}is-active{% endif %}">
-  <a href="{{ path_for('navigation', { 'name': 'helpers' }) }}">
-    Helpers
+{% set navigation = [
+  {
+    item: "overview",
+    label: "Overview"
+  },
+  {
+    item: "base",
+    label: "Base Elements"
+  },
+  {
+    item: "components",
+    label: "Components"
+  },
+  {
+    item: "modules",
+    label: "Modules"
+  },
+  {
+    item: "helpers",
+    label: "Helpers"
+  },
+]%}
+
+{% for nav in navigation %}
+
+<li class="{% if section == nav.item|e %}is-active{% endif %}">
+  <a href="{{ path_for('navigation', { 'name': nav.item|e }) }}"
+    {% if section == nav.item|e %}aria-current="page"{% endif %}>
+    {{ nav.label|e }}
   </a>
 </li>
 
+{% endfor %}
