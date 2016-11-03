@@ -9,9 +9,9 @@
 }
 
 .cs-content-header {
-  padding: $layout-gutter-multiple * 2 0 0 0;
   line-height: 1;
   overflow: hidden;
+  padding: $layout-gutter-multiple * 2 0 0 0;
 
   @media screen and ( max-width: $breakpoint-mid ) {
 
@@ -26,13 +26,13 @@
 }
 
 .cs-content-anchor {
-  font-weight: 700;
-  font-size: 80%;
-  line-height: 1.4;
   display: inline-block;
-  text-transform: lowercase;
-  opacity: 0;
+  font-size: 80%;
+  font-weight: 700;
+  line-height: 1.4;
   margin-left: 5px;
+  opacity: 0;
+  text-transform: lowercase;
   transition: opacity linear .3s;
 }
 
@@ -49,15 +49,14 @@
     max-width: none;
   }
 
-  h1 {
-    font-family: $font-primary;
-    font-style: normal;
-    line-height: normal;
-    font-weight: 700;
-    color: $color-primary;
-    @include font-size(14);
+  &__label {
     @extend .cs-is-clean;
     @extend .cs-is-uppercase;
+    @include font-size(14);
+    color: $color-primary;
+    font-family: $font-primary;
+    font-style: normal;
+    font-weight: 700;
     letter-spacing: .02em;
     line-height: 1.2;
     margin-bottom: 5px;
@@ -66,8 +65,8 @@
   p {
     @extend .cs-is-clean;
     @include font-size(12);
-    font-family: $font-primary;
     color: $color-highlight;
+    font-family: $font-primary;
     font-weight: 400;
     line-height: 1.5;
   }
@@ -85,9 +84,9 @@
 }
 
 .cs-content {
-  padding: $layout-gutter-multiple * 4;
   background: $color-base;
   border-radius: 2px;
+  padding: $layout-gutter-multiple * 4;
 
   @media screen and ( max-width: $breakpoint-mid ) {
     padding: $layout-gutter-multiple * 2;
@@ -96,20 +95,21 @@
 }
 
 .cs-message {
+
   p {
+    @include font-size(14);
+    color: $color-primary;
     margin: 0;
     padding:0;
-    color: $color-primary;
-    @include font-size(14);
   }
 }
 
 .cs-template-list {
+  @include font-size(18);
+  font-family: $font-primary;
   list-style: none;
   margin: 0;
   padding: 0;
-  @include font-size(18);
-  font-family: $font-primary;
 }
 
 .cs-template-list__item {

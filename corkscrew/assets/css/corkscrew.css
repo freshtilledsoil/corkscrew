@@ -128,7 +128,7 @@ body.cs-body {
     *display: inline;
     *vertical-align: auto; }
 
-.cs-is-clean, .cs-content-heading h1, .cs-content-heading p {
+.cs-is-clean, .cs-content-heading__label, .cs-content-heading p {
   padding: 0;
   margin: 0;
   list-style: none; }
@@ -152,7 +152,7 @@ body.cs-body {
 .cs-fadein {
   opacity: 1 !important; }
 
-.cs-is-uppercase, .cs-button, .cs-banner .cs-fts-nav, .cs-is-menu-show a, .cs-content-heading h1, .cs-color-label,
+.cs-is-uppercase, .cs-button, .cs-banner .cs-fts-nav, .cs-is-menu-show a, .cs-content-heading__label, .cs-color-label,
 .cs-color-hex {
   text-transform: uppercase;
   letter-spacing: .03em; }
@@ -421,7 +421,7 @@ body.cs-body {
   @media screen and (max-width: 800px) {
     .cs-content-heading {
       max-width: none; } }
-  .cs-content-heading h1 {
+  .cs-content-heading__label {
     font-family: "Open Sans", Sans-serif;
     font-style: normal;
     line-height: normal;
